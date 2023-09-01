@@ -8,4 +8,4 @@ and test to see if its a valid binary plist. It cleans up after itself, and leav
 Goes nice with:<br>
 [Looting iOS App's cache.db](https://www.trustedsec.com/blog/looting-ios-apps-cache-db/)<br><br>
 @hoodoer<br>
-hooder@bitwisemunitions.dev
+hoodoer@bitwisemunitions.dev

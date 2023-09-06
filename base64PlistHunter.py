@@ -36,12 +36,13 @@ def extplist(plistfile):
     allStrings = recursiveExtractStrings(root)
 
 
-    tempFileDir = "./plistTemp"
+    tempFileDir = "./extractedPlists"
 
     searchString = "Apple binary property list"
 
-    path = Path(tempFileDir)
-    path.mkdir()
+    if not os.path.exists(tempFileDir):
+        path = Path(tempFileDir)
+        path.mkdir()
 
 
     counter = 0
@@ -55,7 +56,9 @@ def extplist(plistfile):
         except:
             continue
 
-        outputFile = tempFileDir + '/' + str(counter) + "_testOutput.plist"
+        outputFile = tempFileDir + '/' + plistfile + '_' + str(counter) + "_extractedPlist.plist"
+        # print("** About to write file: " + outputFile)
+
 
         with open(outputFile, "wb") as file:
             file.write(bplistData)
